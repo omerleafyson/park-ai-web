@@ -31,3 +31,7 @@ npm run build
 ```
 
 Yayın tamamlandıktan sonra özel alan adını Cloudflare Worker'a **Custom Domain** olarak ekleyin. DNS/SSL bağlantısını doğrulayın. Bu depoya yapılan commit tek başına canlı yayın kanıtı değildir.
+
+## Güncel yayın sürümü
+
+Siyah zemin ve kurucunun paylaştığı pembe/mavi metalik halka arka planı, orijinal PARK AI logosu ile ortalanmış “Çok Yakında” yerleşimi. Üretim varlıkları `apps/web/dist` klasörüne derlenir; arka plan `apps/web/background.avif` üzerinden sunulur.
