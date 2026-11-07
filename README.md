@@ -1,13 +1,33 @@
 # PARK AI — Official Website
 
-PARK AI'nin resmi web sitesi için bağımsız GitHub deposu.
+PARK AI resmî web sitesi. AURA Technology bünyesindeki bu proje, AURA Snap ve Sahne Plus depolarından tamamen bağımsızdır.
 
-## İlk aşama — Çok Yakında
+## Mevcut aşama: Çok Yakında
 
-Bu depoda mobil ve masaüstü uyumlu, orijinal yeşil PARK AI P logosunu kullanan geçici bir lansman sayfası hazırlanıyor. Ürün özellikleri henüz halka açık olarak etkinleştirilmemiştir.
+- Mobil, tablet ve masaüstüne uyumlu **siyah / neon yeşil** lansman ekranı.
+- Kurucu tarafından sağlanan orijinal **yeşil P + otomobil tarama logosu** (`apps/web/logo.webp`).
+- Türkçe başlık ve açıklamalar; sahte geri sayım veya çalışmayan buton bulunmaz.
+- Web favicon ve temel sosyal paylaşım açıklamaları.
+- Ürün özellikleri ve kullanıcı hesapları henüz yayında değildir.
 
-## Yayın
+## Cloudflare Workers yayını
 
-Cloudflare Workers üzerinde statik sayfa yayımlamak için `wrangler.toml` ve bağımlılıksız derleme iş akışı kullanılacaktır.
+GitHub bağlantısından `omerleafyson/park-ai-web` reposunu ve `main` dalını seçin.
 
-Proje, Sahne Plus ve AURA Snap depolarından bağımsızdır.
+| Ayar | Değer |
+|---|---|
+| Root directory | `/` |
+| Build command | `npm ci && npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Static assets | `apps/web/dist` |
+
+`wrangler.toml` içindeki Worker adı: `park-ai-web`. Çalışan varlıklar `apps/web/build.mjs` ile `dist` klasörüne hazırlanır.
+
+### Yerel doğrulama
+
+```bash
+npm ci
+npm run build
+```
+
+Yayın tamamlandıktan sonra özel alan adını Cloudflare Worker'a **Custom Domain** olarak ekleyin. DNS/SSL bağlantısını doğrulayın. Bu depoya yapılan commit tek başına canlı yayın kanıtı değildir.
