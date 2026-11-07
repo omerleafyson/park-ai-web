@@ -35,3 +35,7 @@ Yayın tamamlandıktan sonra özel alan adını Cloudflare Worker'a **Custom Dom
 ## Güncel yayın sürümü
 
 Siyah zemin ve kurucunun paylaştığı pembe/mavi metalik halka arka planı, orijinal PARK AI logosu ile ortalanmış “Çok Yakında” yerleşimi. Üretim varlıkları `apps/web/dist` klasörüne derlenir; arka plan `apps/web/background.avif` üzerinden sunulur.
+
+## Üretim kurtarma
+
+Cloudflare statik dosya yükleyicisi ile yapılan hatalı Worker dağıtımları 404 döndü. Sorunsuz çalışan `7da9cfc1` Worker sürümüne karşılık gelen kaynak dosyaları `main` dalında bulunmaktadır. Bundan sonra üretim yayını GitHub `main` üzerinden `npm ci && npm run build` ve `npx wrangler deploy` kullanılarak yapılmalıdır; tek dosyalık manuel Worker yüklemeleri kullanılmamalıdır.
