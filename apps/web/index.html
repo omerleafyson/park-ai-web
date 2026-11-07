@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#030604">
+<meta name="description" content="PARK AI çok yakında. Akıllı park deneyiminin yeni dönemi için hazırlanıyoruz.">
+<meta name="robots" content="index,follow">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PARK AI | Çok Yakında">
+<meta property="og:description" content="Akıllı park deneyiminin yeni dönemi hazırlanıyor. Yakında sizlerle.">
+<link rel="icon" href="/logo.webp" type="image/webp">
+<link rel="preload" href="/logo.webp" as="image" type="image/webp">
+<title>PARK AI | Çok Yakında</title>
+<style>
+:root{color-scheme:dark;--bg:#030604;--green:#8aff59;--soft:#aab8aa}*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:#f5fff1;background:#030604;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden;min-height:100svh}
+.page{position:relative;isolation:isolate;display:flex;min-height:100svh;flex-direction:column;overflow:hidden}
+.page::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse 42% 57% at 77% 46%,#20a92531,transparent 70%),radial-gradient(ellipse 45% 48% at 96% 100%,#65ee1810,transparent 78%),linear-gradient(140deg,#020402 15%,#041008 73%,#030604)}
+.page::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.29;background-image:linear-gradient(90deg,#6c9a6e25 1px,transparent 1px),linear-gradient(0deg,#6c9a6e25 1px,transparent 1px);background-size:88px 88px;mask-image:linear-gradient(to bottom,transparent 10%,#000 50%,transparent 100%)}
+header,main,footer{width:min(1240px,100%);margin-left:auto;margin-right:auto}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:29px clamp(23px,5vw,60px)}
+.nav-logo{display:flex;align-items:center;gap:11px;font-size:1.06rem;font-weight:850;letter-spacing:.14em;white-space:nowrap}
+.nav-logo .p{font-size:1.65rem;color:var(--green);line-height:1;text-shadow:0 0 23px #3aff2690}
+.nav-pill{padding:10px 17px;border:1px solid #72e06665;border-radius:99px;color:#d1ffc8;background:#78ff4910;font-size:.68rem;font-weight:740;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+main{margin-top:auto;margin-bottom:auto;padding:clamp(40px,7vh,105px) clamp(23px,5vw,60px) clamp(70px,8vh,120px);display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);align-items:center;gap:clamp(25px,5.5vw,78px)}
+.copy{position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:11px;font-size:.69rem;letter-spacing:.24em;text-transform:uppercase;color:#abff95;font-weight:790;margin:0 0 25px}
+.kicker::before{content:"";height:2px;width:31px;background:linear-gradient(90deg,#92ff68,transparent);box-shadow:0 0 12px #64ff33}
+h1{font-size:clamp(3.65rem,6.8vw,6.7rem);line-height:1.04;letter-spacing:-.08em;font-weight:800;margin:0 0 28px;text-wrap:balance}
+h1 span{display:block}h1 .green{color:#abff87;text-shadow:0 0 65px #56e4324d}
+.lead{color:#b9c5ba;max-width:510px;font-size:clamp(1.04rem,1.8vw,1.28rem);line-height:1.7;margin:0 0 35px;text-wrap:balance}
+.status{display:inline-flex;align-items:center;gap:14px;padding:15px 22px;border-radius:14px;border:1px solid #78eb6555;background:linear-gradient(125deg,#17361a83,#0a180b7e);box-shadow:inset 0 1px #acff8a2c,0 9px 40px #000a;font-weight:740;font-size:.95rem;color:#e7ffe4}
+.status .dot{width:10px;height:10px;background:#83ff58;border-radius:50%;box-shadow:0 0 0 5px #58ff4826,0 0 17px #66ff36;animation:breath 3s ease-in-out infinite}
+.micro{color:#6e8b72;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:36px}
+.visual{min-height:510px;position:relative;display:grid;place-items:center}
+.visual::before{content:"";position:absolute;width:min(100%,530px);aspect-ratio:1;border:1px solid #65ff4827;border-radius:50%;box-shadow:0 0 0 38px #70fb0a04,0 0 0 85px #70fb0a03,inset 0 0 80px #1df6320a}
+.visual::after{content:"";position:absolute;z-index:-1;bottom:8%;width:72%;height:30%;background:radial-gradient(ellipse,#48fa3066 0%,#4aff2419 35%,transparent 73%);filter:blur(38px)}
+.orbit{position:absolute;width:355px;aspect-ratio:1;border-radius:50%;border:1px solid #6aff3831;transform:rotate(-22deg) scaleX(1.25)}
+img.logo{display:block;position:relative;z-index:1;width:min(100%,465px);height:auto;object-fit:contain;filter:drop-shadow(0 20px 45px #000c);mix-blend-mode:screen}
+footer{border-top:1px solid #557b5440;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:22px clamp(23px,5vw,60px) max(27px,env(safe-area-inset-bottom));font-size:.76rem;letter-spacing:.015em;color:#819385}
+footer a{color:inherit;text-decoration:none}footer a:hover,footer a:focus-visible{color:#b6ffa4;text-decoration:underline}
+@keyframes breath{0%,100%{opacity:1}50%{opacity:.65}}
+@media(max-width:850px){
+main{max-width:660px;grid-template-columns:1fr;gap:5px;text-align:center;padding-top:18px}
+.visual{grid-row:1;min-height:290px;max-height:330px}.visual::before{width:290px}.orbit{width:250px}img.logo{width:min(84%,310px)}
+.copy{grid-row:2}.kicker{justify-content:center}h1{font-size:clamp(3.3rem,10vw,5.5rem)}.lead{margin-left:auto;margin-right:auto}
+.micro{margin-top:29px}
+}
+@media(max-width:440px){
+header{padding-top:22px}.nav-logo{font-size:.91rem}.nav-pill{font-size:.55rem;padding:8px 11px}
+main{padding-bottom:63px}.visual{min-height:250px;max-height:285px}.visual::before{width:238px}img.logo{width:min(85%,275px)}
+h1{font-size:clamp(3.1rem,12.7vw,4.4rem);margin-bottom:21px}.lead{font-size:1rem}.status{font-size:.89rem;padding:14px 19px}
+.micro{font-size:.67rem}footer{flex-direction:column;line-height:1.7;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.status .dot{animation:none}}
+</style>
+</head>
+<body>
+<div class="page">
+<header aria-label="Üst bölüm"><div class="nav-logo"><span class="p" aria-hidden="true">P.</span><span>PARK AI</span></div><span class="nav-pill">Yakında Sizlerle</span></header>
+<main>
+<section class="copy" aria-labelledby="page-title">
+<p class="kicker">Geleceğin akıllı park deneyimi</p>
+<h1 id="page-title"><span>PARK AI</span><span class="green">Çok Yakında.</span></h1>
+<p class="lead">Park etmenin daha akıllı bir geleceği için hazırlanıyoruz. Yeni deneyimimiz çok yakında sizlerle.</p>
+<span class="status" role="status"><span class="dot" aria-hidden="true"></span>Hazırlıklarımız sürüyor</span>
+<p class="micro">Teknoloji · Mobilite · Gelecek</p>
+</section>
+<div class="visual"><span class="orbit" aria-hidden="true"></span><img src="/logo.webp" class="logo" width="473" height="640" fetchpriority="high" alt="PARK AI'nin orijinal yeşil P ve araç tarama logosu"></div>
+</main>
+<footer><span>© 2026 PARK AI. Tüm hakları saklıdır.</span><a href="https://aurainc.com.tr/" target="_blank" rel="noopener noreferrer">AURA Technology</a></footer>
+</div>
+</body>
+</html>

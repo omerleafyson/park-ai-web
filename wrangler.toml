@@ -1,0 +1,5 @@
+name = "park-ai-web"
+compatibility_date = "2026-11-07"
+
+[assets]
+directory = "./apps/web/dist"
