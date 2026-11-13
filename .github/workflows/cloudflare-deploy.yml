@@ -29,6 +29,14 @@ jobs:
           test -f apps/web/support.html
           test -f apps/web/gizlilik-politikasi.html
           test -f apps/web/hesap-silme.html
+      - name: Build exact static site
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          test -s apps/web/dist/index.html
+          test -s apps/web/dist/support.html
+          test -s apps/web/dist/gizlilik-politikasi.html
+          test -s apps/web/dist/hesap-silme.html
       - name: Verify credentials and identify one Cloudflare account
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN || secrets.CF_API_TOKEN || secrets.CLOUDFLARE_TOKEN }}
@@ -44,14 +52,6 @@ jobs:
             account_json=$(curl --fail --silent --show-error -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Accept: application/json" "https://api.cloudflare.com/client/v4/accounts?per_page=50")
             ACCOUNT_JSON="$account_json" node -e 'const x=JSON.parse(process.env.ACCOUNT_JSON||"{}");if(!x.success||!Array.isArray(x.result)||x.result.length!==1||!x.result[0].id){console.error("::error::Cloudflare account cannot be determined unambiguously.");process.exit(1)}console.log("CLOUDFLARE_ACCOUNT_ID="+x.result[0].id)' >> "$GITHUB_ENV"
           fi
-      - name: Build exact static site
-        run: |
-          npm ci --no-audit --no-fund
-          npm run build
-          test -s apps/web/dist/index.html
-          test -s apps/web/dist/support.html
-          test -s apps/web/dist/gizlilik-politikasi.html
-          test -s apps/web/dist/hesap-silme.html
       - name: Deploy existing named production Worker and static assets
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN || secrets.CF_API_TOKEN || secrets.CLOUDFLARE_TOKEN }}
